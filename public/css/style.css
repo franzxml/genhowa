@@ -1,6 +1,6 @@
 /*
- * Style Dasar Genhowa (Updated V5)
- * Theme: Game Tracker Hub (Clean White)
+ * Style Dasar Genhowa (Final Polish)
+ * Fix: Search Box White, Consistent Text, & Footer
  */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
@@ -12,7 +12,6 @@
 }
 
 html {
-    /* Smooth Scroll Global */
     scroll-behavior: smooth;
 }
 
@@ -21,7 +20,7 @@ body {
     line-height: 1.6;
     background-color: #ffffff;
     color: #333;
-    overflow-x: hidden; /* Mencegah scroll horizontal tidak sengaja */
+    overflow-x: hidden;
 }
 
 .container {
@@ -61,7 +60,7 @@ body {
     cursor: pointer;
 }
 
-/* Search Box dengan indikator Shortcut */
+/* Search Box Updated: White Background */
 .search-box {
     position: relative;
     width: 100%;
@@ -70,10 +69,11 @@ body {
 
 .search-box input {
     width: 100%;
-    padding: 10px 60px 10px 45px; /* Padding kanan ditambah untuk badge shortcut */
+    padding: 10px 70px 10px 45px; /* Padding kanan disesuaikan untuk "CTRL + K" */
     border-radius: 50px;
-    border: 1px solid #e0e0e0;
-    background-color: #f9f9f9;
+    /* Border dipertegas sedikit karena background putih */
+    border: 1px solid #d1d1d1;
+    background-color: #ffffff; /* Putih bersih */
     font-family: 'Poppins', sans-serif;
     font-size: 0.9rem;
     outline: none;
@@ -81,7 +81,6 @@ body {
 }
 
 .search-box input:focus {
-    background-color: #fff;
     border-color: #1a1a1a;
     box-shadow: 0 0 0 3px rgba(0,0,0,0.05);
 }
@@ -96,19 +95,20 @@ body {
     opacity: 0.5;
 }
 
-/* Badge shortcut (Ctrl+K) */
+/* Badge shortcut Updated Style */
 .search-shortcut {
     position: absolute;
     right: 15px;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 0.75rem;
-    color: #999;
-    background: #eee;
-    padding: 2px 6px;
+    font-size: 0.7rem;
+    color: #888;
+    background: #f4f4f4;
+    padding: 3px 8px;
     border-radius: 4px;
     border: 1px solid #ddd;
-    pointer-events: none; /* Agar klik tembus ke input */
+    pointer-events: none;
+    font-weight: 600;
 }
 
 .navbar .nav-links {
@@ -132,7 +132,7 @@ body {
 .hero {
     background-color: #fff;
     padding: 100px 0;
-    min-height: 80vh; /* Agar tampilan penuh di layar besar */
+    min-height: 80vh;
     display: flex;
     align-items: center;
 }
@@ -155,11 +155,13 @@ body {
     justify-content: center;
 }
 
+/* Gambar Content: Rounded & Shadow */
 .hero-image img {
     max-width: 100%;
     height: auto;
-    filter: drop-shadow(0 15px 30px rgba(0,0,0,0.1)); /* Shadow lebih dramatis */
-    border-radius: 20px; /* Sedikit rounded untuk gambar game */
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1); /* Efek timbul */
+    object-fit: cover;
 }
 
 .hero-title {
@@ -170,18 +172,10 @@ body {
     color: #1a1a1a;
 }
 
-/* Highlight warna untuk nama game */
-.text-highlight {
-    background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline-block;
-}
-
+/* Subtitle */
 .hero-subtitle {
     font-size: 1.1rem;
-    color: #666;
+    color: #555; /* Sedikit lebih gelap agar kontras */
     margin-bottom: 35px;
     max-width: 95%;
 }
@@ -206,38 +200,44 @@ body {
     box-shadow: 0 8px 25px rgba(0,0,0,0.2);
 }
 
-/* --- Footer (Updated) --- */
+/* --- Footer Updated --- */
 .footer {
     background-color: #fff;
     color: #333;
     text-align: center;
-    padding: 60px 0;
+    padding: 80px 0 60px 0; /* Padding lebih lega */
     border-top: 1px solid #f0f0f0;
 }
 
+.footer h3 {
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
 .social-links {
-    margin-top: 15px;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
 }
 
 .social-item {
-    color: #666;
+    color: #1a1a1a;
     text-decoration: none;
     font-weight: 500;
     display: flex;
     align-items: center;
     gap: 8px;
-    transition: color 0.3s;
-    padding: 8px 16px;
+    transition: all 0.3s;
+    padding: 10px 20px;
     border-radius: 50px;
-    background: #f9f9f9;
+    background: #fff;
+    border: 1px solid #e0e0e0;
 }
 
 .social-item:hover {
-    color: #000;
-    background: #eee;
+    background: #1a1a1a;
+    color: #fff;
+    border-color: #1a1a1a;
 }
 
 /* Responsif */
@@ -247,16 +247,10 @@ body {
         gap: 15px;
         padding: 15px 20px;
     }
-    
     .navbar-center { order: 3; width: 100%; }
-    .search-box { max-width: 100%; }
-    
     .hero .hero-wrapper {
         flex-direction: column-reverse;
         text-align: center;
     }
-
     .hero-title { font-size: 2.2rem; }
-    
-    .social-links { flex-direction: column; gap: 10px; }
 }

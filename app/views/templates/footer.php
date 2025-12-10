@@ -1,6 +1,7 @@
 <footer class="footer">
         <div class="container">
-            <h3>Hubungi Pengembang</h3>
+            <h3>Kontak Pengembang</h3>
+            
             <div class="social-links">
                 <a href="https://instagram.com/franzxml" target="_blank" class="social-item">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -18,8 +19,7 @@
                     @franzxml
                 </a>
             </div>
-            <p style="margin-top: 20px; font-size: 0.8rem; color: #999;">&copy; 2025 Genhowa Project.</p>
-        </div>
+            </div>
     </footer>
 
     <script src="<?= BASEURL; ?>/js/script.js"></script>

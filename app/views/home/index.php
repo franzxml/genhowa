@@ -1,6 +1,7 @@
 <?php
 /**
- * View: Home Index (Vibe: Gaming Tracker)
+ * View: Home Index
+ * * Update: Uniform Text & Reliable Image
  */
 ?>
 
@@ -10,10 +11,10 @@
             
             <div class="hero-content">
                 <h1 class="hero-title">
-                    Tracking Progress <br>
-                    <span style="color: #6c5ce7;">Genshin Impact</span>, <br>
-                    <span style="color: #0984e3;">Honkai: Star Rail</span>, <br>
-                    & <span style="color: #00b894;">Wuthering Waves</span>
+                    Tracking Progress
+                    Genshin Impact,
+                    Honkai: Star Rail,
+                    & Wuthering Waves
                 </h1>
                 <p class="hero-subtitle">
                     Genhowa adalah satu tempat terpusat untuk memantau artefak, material ascension, dan pity counter Anda tanpa ribet. Fokus pada gacha, biarkan kami mencatat sisanya.
@@ -22,7 +23,7 @@
             </div>
 
             <div class="hero-image">
-                <img src="https://cdni.iconscout.com/illustration/premium/thumb/gaming-monitor-illustration-download-in-svg-png-gif-file-formats--setup-computer-game-esport-cyber-sport-pack-entertainment-illustrations-5214041.png" alt="Gaming Tracker Dashboard">
+                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Estetik Gaming Setup">
             </div>
 
         </div>
