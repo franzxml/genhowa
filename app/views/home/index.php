@@ -1,7 +1,7 @@
 <?php
 /**
- * View: Home Index (Final Clean)
- * * Update: Simpler Texts, Vector-style Robot, Clean Buttons
+ * View: Home Index (Final Version)
+ * * Update: No CTA, Game Cards, Clean Text, Fluent Robot
  */
 ?>
 
@@ -16,16 +16,40 @@
                 </h1>
                 
                 <p class="hero-subtitle">
-                    Pantau <strong>Artefak</strong> (Genshin), <strong>Relic</strong> (HSR), & <strong>Echo</strong> (WuWa). 
-                    Hitung pity Primogems, Jades, & Astrites. Fokus gacha, biarkan Genhowa mencatat sisanya.
+                    Pantau Artefak, Relic, & Echo. Hitung pity Primogems, Jades, & Astrites. Fokus gacha, biarkan Genhowa mencatat sisanya.
                 </p>
                 
-                <button id="ctaButton" class="btn-primary">Mulai</button>
-            </div>
+                </div>
 
             <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1535378437323-955a6d7de748?q=80&w=800&auto=format&fit=crop" alt="Genhowa Robot Mascot">
+                <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Robot.png" alt="Genhowa Robot Mascot">
             </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="game-section">
+    <div class="container">
+        <div class="game-grid">
+            
+            <a href="<?= BASEURL; ?>/genshin" class="game-card">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5d/Genshin_Impact_logo.svg/320px-Genshin_Impact_logo.svg.png" alt="Genshin Impact">
+                <h3>Genshin Impact</h3>
+                <span>Tracking Artefak & Pity</span>
+            </a>
+
+            <a href="<?= BASEURL; ?>/starrail" class="game-card">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c9/Honkai_Star_Rail_logo.svg/320px-Honkai_Star_Rail_logo.svg.png" alt="Honkai: Star Rail">
+                <h3>Honkai: Star Rail</h3>
+                <span>Tracking Relic & Warps</span>
+            </a>
+
+            <a href="<?= BASEURL; ?>/wuwa" class="game-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Wuthering_Waves_logo.svg/320px-Wuthering_Waves_logo.svg.png" alt="Wuthering Waves">
+                <h3>Wuthering Waves</h3>
+                <span>Tracking Echo & Convenes</span>
+            </a>
 
         </div>
     </div>
