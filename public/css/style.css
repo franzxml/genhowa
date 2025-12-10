@@ -1,6 +1,6 @@
 /*
- * Style Dasar Genhowa (V11 - Final Fixed)
- * Feature: Game Cards, No Search/Login, Fluent Robot
+ * Style Dasar Genhowa (V12 - Anti-Gagal Edition)
+ * Fix: Inline SVG Robot, Aggressive Footer Overlap
  */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
@@ -29,13 +29,14 @@ body {
     padding: 0 20px;
 }
 
-/* --- Navbar (Minimalis) --- */
+/* --- Navbar --- */
 .navbar {
     background-color: #ffffff;
-    padding: 1.5rem 0; /* Padding sedikit lebih besar karena kosong */
+    padding: 1.5rem 0;
     width: 100%;
-    /* Shadow sangat halus */
-    box-shadow: 0 2px 20px rgba(0,0,0,0.02);
+    /* Shadow dihapus agar menyatu dengan hero putih */
+    box-shadow: none; 
+    border-bottom: 1px solid #f0f0f0;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -43,7 +44,7 @@ body {
 
 .navbar .container-fluid {
     display: flex;
-    justify-content: center; /* Center Brand karena tidak ada menu lain */
+    justify-content: center;
     align-items: center;
     width: 100%;
 }
@@ -59,8 +60,7 @@ body {
 /* --- Hero Section --- */
 .hero {
     background-color: #fff;
-    padding: 80px 0 60px 0;
-    /* Min-height dikurangi karena ada section cards di bawahnya */
+    padding: 60px 0 80px 0;
     min-height: auto; 
     display: flex;
     align-items: center;
@@ -70,11 +70,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 50px;
+    gap: 40px;
 }
 
 .hero-content {
-    flex: 1.2; /* Memberi ruang lebih untuk teks */
+    flex: 1.2;
     padding-right: 20px;
 }
 
@@ -85,41 +85,41 @@ body {
     align-items: center;
 }
 
-/* Robot Image (Microsoft Fluent Style) */
-.hero-image img {
-    max-width: 100%;
+/* Robot SVG Animation */
+.robot-svg {
+    width: 100%;
+    max-width: 350px;
     height: auto;
-    /* Drop shadow lembut */
-    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.08));
+    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.05));
     animation: float 6s ease-in-out infinite;
 }
 
 @keyframes float {
     0% { transform: translateY(0px); }
-    50% { transform: translateY(-12px); }
+    50% { transform: translateY(-15px); }
     100% { transform: translateY(0px); }
 }
 
 .hero-title {
-    font-size: 3.2rem;
+    font-size: 3rem;
     font-weight: 800;
     line-height: 1.2;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     color: #1a1a1a;
     letter-spacing: -1.5px;
 }
 
 .hero-subtitle {
-    font-size: 1.05rem;
+    font-size: 1rem;
     color: #666;
-    margin-bottom: 0; /* Tidak ada button di bawahnya */
+    margin-bottom: 0;
     max-width: 95%;
     line-height: 1.8;
 }
 
 /* --- Game Cards Section --- */
 .game-section {
-    padding: 60px 0 120px 0;
+    padding: 40px 0 140px 0; /* Padding bawah besar untuk memberi ruang wave footer */
     background: #fff;
     position: relative;
     z-index: 1;
@@ -127,97 +127,101 @@ body {
 
 .game-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 Kolom */
-    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
 
 .game-card {
     background: #fff;
     border: 1px solid #eee;
     border-radius: 16px;
-    padding: 30px;
+    padding: 25px;
     text-align: center;
     text-decoration: none;
     color: #333;
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 100%;
 }
 
 .game-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
     border-color: #1a1a1a;
 }
 
-.game-card img {
-    height: 60px; /* Ukuran Logo Game */
+/* Styling Gambar Logo */
+.game-logo {
+    height: 50px;
     width: auto;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     object-fit: contain;
 }
 
+/* Fallback jika gambar gagal (Alt text styling) */
+.game-logo {
+    font-size: 0.8rem;
+    color: #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .game-card h3 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 700;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
 }
 
 .game-card span {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: #888;
     font-weight: 500;
 }
 
-/* --- Footer Decoration (Seamless Fix V3) --- */
+/* --- Footer Fix (Absolute Overlap Method) --- */
 .footer-wrapper {
     position: relative;
     width: 100%;
-    margin-top: 0;
 }
 
+/* Dekorasi Wave */
 .footer-decoration {
     position: absolute;
-    /* Naikkan lebih tinggi agar overlap aman */
-    top: -90px; 
+    /* Posisikan 1px LEBIH BAWAH dari top footer agar menimpa isi footer sedikit */
+    top: -50px; 
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
-    transform: rotate(180deg);
-    z-index: 2;
+    z-index: 2; /* Di atas footer */
     pointer-events: none;
 }
 
 .footer-decoration svg {
     position: relative;
     display: block;
-    width: calc(100% + 10px);
-    height: 90px; /* Tinggi SVG */
-    margin-left: -5px;
-    
-    /* Scale untuk menutup celah sub-pixel */
-    transform: scale(1.02);
-    transform-origin: bottom; 
-    
-    /* Negative margin ekstrem untuk memaksa overlap */
-    margin-bottom: -2px; 
+    width: calc(100% + 2px);
+    height: 51px; /* Tinggi SVG + 1px overlap */
+    margin-left: -1px;
 }
 
 .footer-decoration .shape-fill {
-    fill: #f9f9f9;
+    fill: #f9f9f9; /* Harus SAMA PERSIS dengan bg footer */
 }
 
 .footer {
     background-color: #f9f9f9;
     color: #333;
-    padding: 20px 0 60px 0; /* Padding atas dikurangi */
+    /* Padding top disesuaikan agar konten tidak tertutup wave */
+    padding: 60px 0 40px 0; 
     position: relative;
-    border: none;
-    margin-top: -1px;
+    margin-top: 0;
+    z-index: 1;
 }
 
 .footer-content {
@@ -225,16 +229,16 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 30px;
 }
 
 .footer-left h3 {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #666;
+    color: #888;
 }
 
 .footer-right {
@@ -247,7 +251,7 @@ body {
 .footer-quote {
     font-family: 'Georgia', serif;
     font-style: italic;
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     color: #444;
 }
 
@@ -268,6 +272,7 @@ body {
     background: #fff;
     border: 1px solid #ddd;
     transition: all 0.2s;
+    font-size: 0.9rem;
 }
 
 .social-item:hover {
@@ -278,16 +283,14 @@ body {
 
 /* Responsif */
 @media (max-width: 768px) {
-    .navbar .container-fluid {
-        justify-content: center;
-    }
     .hero .hero-wrapper {
         flex-direction: column-reverse;
         text-align: center;
-        gap: 30px;
     }
-    .game-grid {
-        grid-template-columns: 1fr; /* Stack card di mobile */
+    .game-grid { grid-template-columns: 1fr; }
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
     }
     .footer-right {
         text-align: center;
