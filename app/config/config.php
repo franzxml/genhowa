@@ -1,16 +1,14 @@
 <?php
-
 /**
- * Config
- * * Menyimpan konstanta-konstanta konfigurasi utama aplikasi.
+ * Config Teyrail
  */
 
-// Base URL: Alamat dasar aplikasi
-// Kita sesuaikan dengan Virtual Host dari Laragon
-define('BASEURL', 'http://genhowa.test');
+// PASTIKAN: Ganti 'teyrail.test' sesuai nama folder proyek kamu di Laragon
+// Jika folder masih 'genhowa', pakai 'http://genhowa.test'
+define('BASEURL', 'http://teyrail.test');
 
-// DB Config (Persiapan untuk nanti)
+// DB Config (Default Laragon biasanya root, tanpa password)
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', '');
-define('DB_NAME', 'genhowa');
+define('DB_NAME', 'teyrail'); // Sesuaikan nama database jika sudah buat
