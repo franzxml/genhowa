@@ -1,6 +1,7 @@
 <?php
 /**
- * View: Home Index (Teyrail Rebrand)
+ * View: Home Index (Teyrail Final Assets)
+ * * Update: Real Images from Imgur
  */
 ?>
 
@@ -21,12 +22,7 @@
             </div>
 
             <div class="hero-image">
-                <div class="prompt-box">
-                    <span class="prompt-label">AI Image Prompt (Hero)</span>
-                    <div class="prompt-text">
-                        "A seamless blend of a fantasy open world landscape (Teyvat style) and a futuristic space train station (Star Rail style), anime style, cel shaded, clean white background, high quality 3d render, minimal composition, soft lighting."
-                    </div>
-                </div>
+                <img src="https://i.imgur.com/k0spfIR.jpeg" alt="Teyrail Dashboard Illustration">
             </div>
 
         </div>
@@ -38,13 +34,13 @@
         <div class="game-grid">
             
             <a href="<?= BASEURL; ?>/genshin" class="game-card">
-                <img src="https://imgur.com/a/ncWb75Z" class="game-logo" alt="Genshin Impact Logo">
+                <img src="https://i.imgur.com/dvdXOmD.png" class="game-logo" alt="Genshin Impact">
                 <h3>Genshin Impact</h3>
                 <span>Tracking Artefak & Pity</span>
             </a>
 
             <a href="<?= BASEURL; ?>/starrail" class="game-card">
-                <img src="https://imgur.com/a/BMRLE1m" class="game-logo" alt="Honkai: Star Rail Logo">
+                <img src="https://i.imgur.com/MqeTVB0.png" class="game-logo" alt="Honkai: Star Rail">
                 <h3>Honkai: Star Rail</h3>
                 <span>Tracking Relic & Warps</span>
             </a>
