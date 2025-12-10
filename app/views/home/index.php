@@ -1,7 +1,7 @@
 <?php
 /**
  * View: Home Index
- * * Update: Graphic Design Abstract Image
+ * * Update: Stable Abstract Graphic Design Image
  */
 ?>
 
@@ -23,7 +23,7 @@
             </div>
 
             <div class="hero-image">
-                <img src="https://cdni.iconscout.com/illustration/premium/thumb/metaverse-technology-illustration-download-in-svg-png-gif-file-formats--virtual-reality-vr-tech-future-augmented-ar-pack-science-illustrations-4447477.png" alt="Abstract Graphic Design Illustration">
+                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop" alt="Abstract 3D Graphic Design Art">
             </div>
 
         </div>

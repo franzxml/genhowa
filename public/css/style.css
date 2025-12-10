@@ -1,6 +1,6 @@
 /*
- * Style Dasar Genhowa (Final V6)
- * Fix: Premium Button, Split Footer, & Graphic Design Vibe
+ * Style Dasar Genhowa (V7 - Fixed & Polished)
+ * Feature: 3D Abstract Hero & Graphic Footer
  */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
@@ -109,7 +109,7 @@ body {
     font-weight: 600;
 }
 
-/* Nav Links - Sisa Login */
+/* Nav Links - Login Button */
 .navbar .nav-links {
     list-style: none;
     display: flex;
@@ -118,13 +118,12 @@ body {
 
 .navbar .nav-links li { margin-left: 30px; }
 
-/* Styling khusus tombol login di navbar agar beda dikit */
 .navbar .nav-links a.login-btn {
     color: #1a1a1a;
     text-decoration: none;
     font-weight: 600;
     border: 1px solid #1a1a1a;
-    padding: 8px 20px;
+    padding: 8px 24px;
     border-radius: 50px;
     transition: all 0.3s ease;
 }
@@ -137,8 +136,8 @@ body {
 /* --- Hero Section --- */
 .hero {
     background-color: #fff;
-    padding: 100px 0;
-    min-height: 85vh; /* Sedikit lebih tinggi */
+    padding: 80px 0 120px 0; /* Padding bawah ditambah untuk space */
+    min-height: 85vh;
     display: flex;
     align-items: center;
 }
@@ -159,116 +158,138 @@ body {
     flex: 1;
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
-/* Gambar 3D Graphic Design Vibe */
+/* Gambar 3D Graphic Design */
 .hero-image img {
     max-width: 100%;
     height: auto;
-    /* Tidak perlu border-radius jika gambarnya objek 3D floating */
-    filter: drop-shadow(0 20px 50px rgba(0,0,0,0.15)); /* Shadow lembut */
-    animation: float 6s ease-in-out infinite;
+    border-radius: 30px; /* Rounded modern */
+    /* Shadow lembut berwarna */
+    box-shadow: 0 25px 50px -12px rgba(100, 100, 250, 0.25); 
+    transform: perspective(1000px) rotateY(-5deg); /* Efek 3D tilt halus */
+    transition: transform 0.5s ease;
 }
 
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-    100% { transform: translateY(0px); }
+.hero-image img:hover {
+    transform: perspective(1000px) rotateY(0deg) scale(1.02);
 }
 
 .hero-title {
-    font-size: 3.2rem; /* Lebih besar sedikit */
-    font-weight: 800; /* Lebih tebal */
+    font-size: 3.5rem;
+    font-weight: 800;
     line-height: 1.1;
     margin-bottom: 25px;
     color: #1a1a1a;
-    letter-spacing: -1px;
+    letter-spacing: -1.5px;
 }
 
 .hero-subtitle {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     color: #555;
     margin-bottom: 40px;
     max-width: 90%;
+    font-weight: 400;
 }
 
-/* --- Premium Button Style --- */
+/* Premium Button */
 .btn-primary {
     display: inline-block;
-    /* Gradient Hitam ke Abu Gelap */
-    background: linear-gradient(135deg, #000000 0%, #333333 100%);
+    background: #1a1a1a;
     color: #fff;
-    padding: 16px 50px; /* Lebih besar */
-    border-radius: 50px;
+    padding: 16px 45px;
+    border-radius: 12px; /* Sedikit kotak agar lebih teknis/modern */
     border: none;
     cursor: pointer;
     font-size: 1rem;
     font-weight: 600;
-    letter-spacing: 0.5px;
-    /* Shadow Glow Halus */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2); 
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    position: relative;
-    overflow: hidden;
-}
-
-/* Efek Kilau (Sheen) saat hover */
-.btn-primary::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-    transition: 0.5s;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15); 
+    transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    background: #000;
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
 }
 
-.btn-primary:hover::after {
-    left: 100%;
+/* --- Footer Graphic Design --- */
+.footer-wrapper {
+    position: relative;
+    width: 100%;
+    margin-top: 50px;
 }
 
-/* --- Footer Split Layout --- */
+/* SVG Wave Decoration */
+.footer-decoration {
+    position: absolute;
+    top: -50px; /* Naik ke atas footer */
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg); /* Membalik wave agar menghadap atas */
+}
+
+.footer-decoration svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 50px;
+}
+
+.footer-decoration .shape-fill {
+    fill: #f9f9f9; /* Warna background footer */
+}
+
 .footer {
-    background-color: #fff;
+    background-color: #f9f9f9; /* Background sedikit abu agar ada dimensi */
     color: #333;
     padding: 60px 0;
-    border-top: 1px solid #f0f0f0;
+    position: relative;
 }
 
-/* Container Footer menjadi Flexbox */
 .footer-content {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Vertikal center */
+    align-items: flex-start; /* Alignment atas */
     flex-wrap: wrap;
     gap: 30px;
 }
 
 .footer-left h3 {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 700;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
+    color: #888;
 }
 
 .footer-right {
     text-align: right;
-    max-width: 400px;
+    max-width: 450px;
+    position: relative;
+}
+
+/* Garis dekoratif vertikal kecil di samping quotes */
+.footer-right::before {
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 5px;
+    width: 3px;
+    height: 40px;
+    background: #1a1a1a; /* Aksen hitam */
 }
 
 .footer-quote {
-    font-family: 'Georgia', serif; /* Font serif untuk quotes */
+    font-family: 'Georgia', serif;
     font-style: italic;
-    font-size: 1.1rem;
-    color: #666;
-    line-height: 1.5;
+    font-size: 1.25rem;
+    color: #444;
+    line-height: 1.6;
 }
 
 .social-links {
@@ -282,17 +303,20 @@ body {
     font-weight: 500;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     transition: all 0.3s;
-    padding: 8px 16px;
+    padding: 10px 20px;
     border-radius: 8px;
-    background: #f9f9f9;
-    font-size: 0.9rem;
+    background: #fff;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 .social-item:hover {
     background: #1a1a1a;
     color: #fff;
+    border-color: #1a1a1a;
+    transform: translateY(-2px);
 }
 
 /* Responsif */
@@ -314,9 +338,17 @@ body {
     .footer-content {
         flex-direction: column;
         text-align: center;
+        align-items: center;
     }
     
-    .footer-right { text-align: center; }
+    .footer-right { 
+        text-align: center; 
+        padding-right: 0;
+    }
+    
+    .footer-right::before {
+        display: none; /* Hapus aksen di mobile */
+    }
     
     .social-links { justify-content: center; }
 }
