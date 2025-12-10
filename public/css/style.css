@@ -1,9 +1,9 @@
 /*
- * Style Dasar Genhowa (V7 - Fixed & Polished)
- * Feature: 3D Abstract Hero & Graphic Footer
+ * Style Dasar Genhowa (V8 - Premium Gaming Polish)
+ * Fix: Cyberpunk Image, Glass Button, Seamless Footer
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 * {
     margin: 0;
@@ -34,7 +34,8 @@ body {
     background-color: #ffffff;
     padding: 1rem 0;
     width: 100%;
-    box-shadow: 0 2px 15px rgba(0,0,0,0.03);
+    /* Shadow yang lebih halus dan lebar */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -53,45 +54,45 @@ body {
 
 .navbar .brand {
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 800; /* Extra Bold */
     color: #1a1a1a;
     text-decoration: none;
-    letter-spacing: -0.5px;
-    cursor: pointer;
+    letter-spacing: -1px;
 }
 
 /* Search Box */
 .search-box {
     position: relative;
     width: 100%;
-    max-width: 400px;
+    max-width: 420px;
 }
 
 .search-box input {
     width: 100%;
-    padding: 10px 70px 10px 45px;
-    border-radius: 50px;
-    border: 1px solid #d1d1d1;
-    background-color: #ffffff;
+    padding: 12px 70px 12px 50px;
+    border-radius: 12px; /* Lebih kotak modern */
+    border: 1px solid #e5e5e5;
+    background-color: #fcfcfc;
     font-family: 'Poppins', sans-serif;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     outline: none;
     transition: all 0.3s ease;
 }
 
 .search-box input:focus {
-    border-color: #1a1a1a;
-    box-shadow: 0 0 0 3px rgba(0,0,0,0.05);
+    border-color: #000;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 .search-icon {
     position: absolute;
-    left: 15px;
+    left: 18px;
     top: 50%;
     transform: translateY(-50%);
-    width: 18px;
-    height: 18px;
-    opacity: 0.5;
+    width: 20px;
+    height: 20px;
+    opacity: 0.4;
 }
 
 .search-shortcut {
@@ -99,11 +100,11 @@ body {
     right: 15px;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 0.7rem;
-    color: #888;
-    background: #f4f4f4;
-    padding: 3px 8px;
-    border-radius: 4px;
+    font-size: 0.75rem;
+    color: #666;
+    background: #f0f0f0;
+    padding: 4px 8px;
+    border-radius: 6px;
     border: 1px solid #ddd;
     pointer-events: none;
     font-weight: 600;
@@ -122,31 +123,34 @@ body {
     color: #1a1a1a;
     text-decoration: none;
     font-weight: 600;
-    border: 1px solid #1a1a1a;
-    padding: 8px 24px;
+    border: 2px solid #1a1a1a; /* Border sedikit tebal */
+    padding: 10px 28px;
     border-radius: 50px;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navbar .nav-links a.login-btn:hover { 
     background-color: #1a1a1a;
     color: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 /* --- Hero Section --- */
 .hero {
     background-color: #fff;
-    padding: 80px 0 120px 0; /* Padding bawah ditambah untuk space */
-    min-height: 85vh;
+    padding: 60px 0 140px 0; /* Padding bawah ekstra untuk kompensasi wave footer */
+    min-height: 90vh;
     display: flex;
     align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
 .hero .hero-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 60px;
+    gap: 70px;
 }
 
 .hero-content {
@@ -161,140 +165,151 @@ body {
     position: relative;
 }
 
-/* Gambar 3D Graphic Design */
+/* Gambar 3D Cyberpunk */
 .hero-image img {
     max-width: 100%;
     height: auto;
-    border-radius: 30px; /* Rounded modern */
-    /* Shadow lembut berwarna */
-    box-shadow: 0 25px 50px -12px rgba(100, 100, 250, 0.25); 
-    transform: perspective(1000px) rotateY(-5deg); /* Efek 3D tilt halus */
-    transition: transform 0.5s ease;
+    border-radius: 24px;
+    /* Shadow neon halus */
+    box-shadow: 0 30px 60px -10px rgba(110, 50, 250, 0.3);
+    transform: perspective(1000px) rotateY(-5deg) rotateX(2deg);
+    transition: transform 0.6s ease;
 }
 
 .hero-image img:hover {
-    transform: perspective(1000px) rotateY(0deg) scale(1.02);
+    transform: perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1.03);
 }
 
 .hero-title {
-    font-size: 3.5rem;
+    font-size: 3.8rem;
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 25px;
     color: #1a1a1a;
-    letter-spacing: -1.5px;
+    letter-spacing: -2px;
 }
 
 .hero-subtitle {
-    font-size: 1.15rem;
-    color: #555;
-    margin-bottom: 40px;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 45px;
     max-width: 90%;
     font-weight: 400;
+    line-height: 1.8;
 }
 
-/* Premium Button */
+/* --- Premium Button (Updated) --- */
 .btn-primary {
-    display: inline-block;
-    background: #1a1a1a;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    /* Gradient yang lebih "Gaming/Tech" (Deep Purple ke Black) */
+    background: linear-gradient(135deg, #2b2b2b 0%, #000000 100%);
     color: #fff;
-    padding: 16px 45px;
-    border-radius: 12px; /* Sedikit kotak agar lebih teknis/modern */
-    border: none;
+    padding: 18px 50px;
+    border-radius: 16px; /* Modern Soft Square */
+    border: 1px solid rgba(255,255,255,0.1); /* Border halus */
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-weight: 600;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15); 
-    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+    /* Shadow Glow */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.2); 
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy effect */
+    position: relative;
+    overflow: hidden;
 }
 
 .btn-primary:hover {
-    background: #000;
-    transform: translateY(-4px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    transform: translateY(-5px);
+    /* Glow menjadi lebih kuat saat hover */
+    box-shadow: 0 20px 40px rgba(100, 50, 250, 0.3), inset 0 1px 0 rgba(255,255,255,0.2);
+    border-color: rgba(100, 50, 250, 0.5);
 }
 
-/* --- Footer Graphic Design --- */
+/* --- Footer Decoration (Seamless Fix) --- */
 .footer-wrapper {
     position: relative;
     width: 100%;
-    margin-top: 50px;
+    /* Margin top negatif untuk menarik footer ke atas konten hero jika perlu, 
+       tapi lebih aman kita mainkan posisi SVG-nya */
+    margin-top: 0; 
 }
 
-/* SVG Wave Decoration */
 .footer-decoration {
     position: absolute;
-    top: -50px; /* Naik ke atas footer */
+    /* Naikkan SVG sedikit lebih tinggi untuk overlap background putih hero */
+    top: -60px; 
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
-    transform: rotate(180deg); /* Membalik wave agar menghadap atas */
+    transform: rotate(180deg);
+    z-index: 2; /* Di atas konten footer */
+    pointer-events: none; /* Agar tidak menghalangi klik */
 }
 
 .footer-decoration svg {
     position: relative;
     display: block;
-    width: calc(100% + 1.3px);
-    height: 50px;
+    width: calc(100% + 2px); /* Lebihkan dikit untuk anti-aliasing */
+    height: 60px;
+    /* Penting: block display menghilangkan gap whitespace bawaan inline */
+    display: block; 
 }
 
+/* Samakan warna fill ini dengan background .footer */
 .footer-decoration .shape-fill {
-    fill: #f9f9f9; /* Warna background footer */
+    fill: #f8f9fa; 
 }
 
 .footer {
-    background-color: #f9f9f9; /* Background sedikit abu agar ada dimensi */
+    background-color: #f8f9fa; /* Warna abu sangat muda (premium) */
     color: #333;
-    padding: 60px 0;
+    padding: 40px 0 80px 0; /* Padding atas dikurangi karena sudah ada wave */
     position: relative;
+    border-top: none !important; /* Pastikan tidak ada border */
+    /* Tambahan negative margin-top untuk memaksa nempel ke wave jika ada celah */
+    margin-top: -1px; 
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; /* Alignment atas */
+    align-items: flex-start;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 40px;
 }
 
 .footer-left h3 {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: #888;
+    letter-spacing: 2px;
+    color: #999;
 }
 
 .footer-right {
     text-align: right;
     max-width: 450px;
     position: relative;
-}
-
-/* Garis dekoratif vertikal kecil di samping quotes */
-.footer-right::before {
-    content: '';
-    position: absolute;
-    right: -20px;
-    top: 5px;
-    width: 3px;
-    height: 40px;
-    background: #1a1a1a; /* Aksen hitam */
+    padding-right: 25px;
+    border-right: 4px solid #1a1a1a; /* Ganti garis dekorasi ke kanan */
 }
 
 .footer-quote {
     font-family: 'Georgia', serif;
     font-style: italic;
-    font-size: 1.25rem;
-    color: #444;
-    line-height: 1.6;
+    font-size: 1.3rem;
+    color: #333;
+    line-height: 1.5;
 }
 
+/* Social Icons Round */
 .social-links {
     display: flex;
-    gap: 15px;
+    gap: 12px;
 }
 
 .social-item {
@@ -303,52 +318,32 @@ body {
     font-weight: 500;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     transition: all 0.3s;
-    padding: 10px 20px;
-    border-radius: 8px;
+    padding: 12px 24px;
+    border-radius: 12px;
     background: #fff;
-    border: 1px solid #eee;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
 }
 
 .social-item:hover {
     background: #1a1a1a;
     color: #fff;
-    border-color: #1a1a1a;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 /* Responsif */
 @media (max-width: 768px) {
-    .navbar .container-fluid {
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px 20px;
-    }
-    .navbar-center { order: 3; width: 100%; }
-    
-    .hero .hero-wrapper {
-        flex-direction: column-reverse;
-        text-align: center;
-    }
-    
-    .hero-title { font-size: 2.5rem; }
-    
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-    }
+    .hero-title { font-size: 2.8rem; }
     
     .footer-right { 
         text-align: center; 
         padding-right: 0;
+        border-right: none;
     }
     
-    .footer-right::before {
-        display: none; /* Hapus aksen di mobile */
-    }
-    
-    .social-links { justify-content: center; }
+    .footer-decoration { top: -40px; }
+    .footer-decoration svg { height: 40px; }
 }

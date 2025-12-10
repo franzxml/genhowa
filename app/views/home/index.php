@@ -1,7 +1,7 @@
 <?php
 /**
- * View: Home Index
- * * Update: Stable Abstract Graphic Design Image
+ * View: Home Index (V8)
+ * * Update: High-End Cyberpunk Abstract Image
  */
 ?>
 
@@ -17,13 +17,13 @@
                     & Wuthering Waves
                 </h1>
                 <p class="hero-subtitle">
-                    Genhowa adalah satu tempat terpusat untuk memantau artefak, material ascension, dan pity counter Anda tanpa ribet. Fokus pada gacha, biarkan kami mencatat sisanya.
+                    Satu tempat terpusat untuk memantau artefak, material, dan pity counter Anda. Fokus pada gacha, biarkan Genhowa mencatat sisanya dengan presisi.
                 </p>
-                <button id="ctaButton" class="btn-primary">Mulai Tracking</button>
+                <button id="ctaButton" class="btn-primary">Mulai Tracking Sekarang</button>
             </div>
 
             <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop" alt="Abstract 3D Graphic Design Art">
+                <img src="https://images.unsplash.com/photo-1635322966219-b75ed372eb01?q=80&w=1000&auto=format&fit=crop" alt="Genhowa Cyberpunk Interface Art">
             </div>
 
         </div>
