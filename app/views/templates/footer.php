@@ -4,6 +4,6 @@
         </div>
     </footer>
 
-    <script src="<?= 'http://localhost/genhowa/public/js/script.js'; ?>"></script>
+    <script src="<?= BASEURL; ?>/js/script.js"></script>
 </body>
 </html>
