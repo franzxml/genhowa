@@ -2,7 +2,7 @@
 /**
  * View: Home Index
  * * Halaman utama Triverse.
- * * Update: Penambahan kartu Wuthering Waves dan penyesuaian teks Hero.
+ * * Update: Implementasi gambar hero baru dan layout 3 kolom.
  */
 ?>
 
@@ -23,7 +23,7 @@
             </div>
 
             <div class="hero-image">
-                <img src="https://i.imgur.com/k0spfIR.jpeg" alt="Triverse Dashboard Illustration">
+                <img src="https://i.imgur.com/Bgl9A38.jpeg" alt="Triverse Modern Dashboard Graphic">
             </div>
 
         </div>
@@ -47,7 +47,7 @@
             </a>
 
             <a href="<?= BASEURL; ?>/wuwa" class="game-card">
-                <img src="https://upload.wikimedia.org/wikipedia/en/2/23/Wuthering_Waves.png" class="game-logo" alt="Wuthering Waves">
+                <img src="https://upload.wikimedia.org/wikipedia/id/thumb/5/5d/Wuthering_Waves_logo.svg/1024px-Wuthering_Waves_logo.svg.png?20240527141643" class="game-logo" alt="Wuthering Waves">
                 <h3>Wuthering Waves</h3>
                 <span>Tracking Echoes & Convenes</span>
             </a>

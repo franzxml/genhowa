@@ -15,6 +15,6 @@
 <body>
     <nav class="navbar">
         <div class="container-fluid">
-            <a href="<?= BASEURL; ?>" class="brand" id="brandLink">Triverse</a>
+            <a href="<?= BASEURL; ?>" class="brand" id="brandLink">triverse</a>
         </div>
     </nav>
