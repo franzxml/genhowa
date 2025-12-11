@@ -2,6 +2,10 @@
     # Mengaktifkan Rewrite Engine
     RewriteEngine On
 
+    # Mencegah orang melihat isi direktori (Options -Indexes)
+    # Ini membuat tampilan "Forbidden" jika tidak ada index file, alih-alih list file
+    Options -Indexes
+
     # Aturan 1: Arahkan root domain (kosong) ke folder public
     RewriteRule ^$ public/ [L]
 

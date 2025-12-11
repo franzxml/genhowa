@@ -1,0 +1,19 @@
+<IfModule mod_rewrite.c>
+    # Mengaktifkan opsi Multiviews (opsional, untuk kompatibilitas)
+    Options -Multiviews
+
+    # Mengaktifkan Rewrite Engine
+    RewriteEngine On
+
+    # Cek apakah request BUKAN folder fisik (!-d)
+    RewriteCond %{REQUEST_FILENAME} !-d
+    
+    # Cek apakah request BUKAN file fisik (!-f)
+    RewriteCond %{REQUEST_FILENAME} !-f
+
+    # Aturan Utama: Redirect semua request sisa ke index.php
+    # url=$1 mengirimkan path yang diketik user sebagai parameter $_GET['url']
+    # [QSA] = Query String Append (agar parameter lain ?id=1 tetap terbawa)
+    # [L] = Last rule (berhenti memproses aturan lain)
+    RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
+</IfModule>
