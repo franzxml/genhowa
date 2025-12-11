@@ -1,6 +1,6 @@
 /*
- * Style Dasar Triverse (V2.0 - Rebrand)
- * Update: Support 3 Columns Grid for WuWa
+ * Style Dasar Triverse (V2.2 - Layout Precision)
+ * Update: Fixed Height Logo Wrapper untuk Text Alignment Sempurna
  */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
@@ -24,7 +24,7 @@ body {
 }
 
 .container {
-    max-width: 1100px; /* Diperlebar sedikit agar 3 kolom muat nyaman */
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -84,7 +84,7 @@ body {
 
 .hero-image img {
     width: 100%;       
-    max-width: 420px;  
+    max-width: 480px;
     height: auto;
     border-radius: 20px;
 }
@@ -114,11 +114,10 @@ body {
     z-index: 1;
 }
 
-/* GRID UPDATE: Menggunakan repeat 3 untuk 3 game */
 .game-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
-    gap: 30px; /* Gap sedikit diperkecil agar muat */
+    gap: 30px;
     max-width: 100%;
     margin: 0 auto;
 }
@@ -127,7 +126,7 @@ body {
     background: #fff;
     border: 1px solid #eee;
     border-radius: 20px;
-    padding: 40px 20px; /* Padding samping dikurangi sedikit */
+    padding: 40px 20px;
     text-align: center;
     text-decoration: none;
     color: #333;
@@ -136,7 +135,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /* Kita gunakan justify-content flex-start agar konten mulai dari atas */
+    justify-content: flex-start; 
+    height: 100%;
 }
 
 .game-card:hover {
@@ -145,26 +146,57 @@ body {
     border-color: #1a1a1a;
 }
 
-.game-logo {
-    height: 90px; /* Sedikit diperkecil agar seimbang di 3 kolom */
-    width: auto;   
-    margin-bottom: 25px;
-    object-fit: contain;
+/* WRAPPER LOGO (Kunci Kerapian)
+   Memberikan ruang pasti setinggi 130px untuk logo.
+   Logo akan di-center secara vertikal di dalam kotak ini.
+   Ini menjamin teks di bawahnya (H3) selalu mulai dari titik yang sama.
+*/
+.card-logo-wrapper {
+    height: 130px; 
+    width: 100%;
+    display: flex;
+    align-items: center; /* Center Vertikal */
+    justify-content: center; /* Center Horizontal */
+    margin-bottom: 20px; /* Jarak pasti ke teks */
 }
 
-.game-card h3 {
-    font-size: 1.15rem; /* Font size disesuaikan */
+/* Reset margin pada img karena sudah dihandle wrapper */
+.game-logo {
+    margin-bottom: 0;
+    object-fit: contain;
+    display: block;
+    max-height: 100%; /* Agar tidak keluar dari wrapper */
+}
+
+/* Logo Sizing Strategy */
+.logo-genshin {
+    width: 160px; 
+}
+
+.logo-hsr {
+    width: 180px; 
+}
+
+.logo-wuwa {
+    height: 90px;
+    width: auto;
+}
+
+/* Styling Teks */
+.card-text h3 {
+    font-size: 1.15rem;
     font-weight: 700;
     margin-bottom: 8px;
+    line-height: 1.3;
 }
 
-.game-card span {
+.card-text span {
     font-size: 0.85rem;
     color: #888;
     font-weight: 500;
 }
 
-/* --- Footer (CSS Lama tetap dipertahankan dengan sedikit penyesuaian) --- */
+/* --- Footer --- */
 .footer-wrapper {
     position: relative;
     width: 100%;
@@ -259,7 +291,6 @@ body {
 
 /* Responsif */
 @media (max-width: 900px) {
-    /* Tablet: 2 kolom mungkin lebih baik, tapi 1 kolom lebih aman */
     .game-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
@@ -273,7 +304,7 @@ body {
         max-width: 300px; 
     }
 
-    .game-grid { grid-template-columns: 1fr; } /* Mobile: 1 kolom */
+    .game-grid { grid-template-columns: 1fr; } 
     
     .footer-content {
         flex-direction: column;

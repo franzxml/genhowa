@@ -2,7 +2,7 @@
 /**
  * View: Home Index
  * * Halaman utama Triverse.
- * * Update: Implementasi gambar hero baru dan layout 3 kolom.
+ * * Update: Deskripsi card kini menggunakan nama universe (Lore).
  */
 ?>
 
@@ -35,21 +35,36 @@
         <div class="game-grid">
             
             <a href="<?= BASEURL; ?>/genshin" class="game-card">
-                <img src="https://i.imgur.com/dvdXOmD.png" class="game-logo" alt="Genshin Impact">
-                <h3>Genshin Impact</h3>
-                <span>Tracking Artefak & Pity</span>
+                <div class="card-logo-wrapper">
+                    <img src="https://i.imgur.com/dvdXOmD.png" class="game-logo logo-genshin" alt="Genshin Impact">
+                </div>
+                
+                <div class="card-text">
+                    <h3>Genshin Impact</h3>
+                    <span>Dunia Fantasi Teyvat</span>
+                </div>
             </a>
 
             <a href="<?= BASEURL; ?>/starrail" class="game-card">
-                <img src="https://i.imgur.com/MqeTVB0.png" class="game-logo" alt="Honkai: Star Rail">
-                <h3>Honkai: Star Rail</h3>
-                <span>Tracking Relic & Warps</span>
+                <div class="card-logo-wrapper">
+                    <img src="https://i.imgur.com/MqeTVB0.png" class="game-logo logo-hsr" alt="Honkai: Star Rail">
+                </div>
+
+                <div class="card-text">
+                    <h3>Honkai: Star Rail</h3>
+                    <span>Galaksi & Lautan Bintang</span>
+                </div>
             </a>
 
             <a href="<?= BASEURL; ?>/wuwa" class="game-card">
-                <img src="https://upload.wikimedia.org/wikipedia/id/thumb/5/5d/Wuthering_Waves_logo.svg/1024px-Wuthering_Waves_logo.svg.png?20240527141643" class="game-logo" alt="Wuthering Waves">
-                <h3>Wuthering Waves</h3>
-                <span>Tracking Echoes & Convenes</span>
+                <div class="card-logo-wrapper">
+                    <img src="https://upload.wikimedia.org/wikipedia/id/thumb/5/5d/Wuthering_Waves_logo.svg/1024px-Wuthering_Waves_logo.svg.png?20240527141643" class="game-logo logo-wuwa" alt="Wuthering Waves">
+                </div>
+
+                <div class="card-text">
+                    <h3>Wuthering Waves</h3>
+                    <span>Dunia Baru Solaris-3</span>
+                </div>
             </a>
 
         </div>
